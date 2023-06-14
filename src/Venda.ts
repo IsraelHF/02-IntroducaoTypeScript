@@ -44,4 +44,17 @@ export default class Venda{
     set produtos(produtos: Produto[]){
         this._produtos = produtos;
     } 
+
+
+    calcularTotal(): number {
+        let total = 0;
+    
+        for (const produto of this._produtos) {
+          total += produto.valor;
+        }
+        
+        console.log("A valor da venda foi de R$: ");
+        return total;
+      }
+      
 }
