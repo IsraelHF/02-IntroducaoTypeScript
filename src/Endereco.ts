@@ -1,10 +1,20 @@
+enum ESTADO{
+    PR,
+    SP,
+    SC,
+    RS,
+    MG,
+    RJ
+}
+
+
 export default class Endereco {
     private _rua : String;
     private _numero : number;
     private _cidade : String;
-    private _estado : String
+    private _estado : ESTADO
 
-    constructor (rua: String, numero: number, cidade: String, estado: String){
+    constructor (rua: String, numero: number, cidade: String, estado: ESTADO){
         this._rua = rua;
         this._numero = numero;
         this._cidade = cidade;
@@ -35,11 +45,11 @@ export default class Endereco {
         this._cidade = cidade;
     } 
 
-    get estado() : String {
+    get estado() : ESTADO {
         return this._estado;
     }
 
-    set estado(estado: String){
+    set estado(estado: ESTADO){
         this._estado = estado;
     } 
 

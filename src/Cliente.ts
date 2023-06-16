@@ -1,15 +1,21 @@
 import Endereco from "./Endereco";
 import Telefone from "./Telefone";
 
+enum SEXO {
+    Masculino,
+    Feminino,
+    Indefinido,
+}
+
 export default class Cliente{
     private _nome : String;
     private _cpf : number;
     private _dataNascimento : number;
-    private _sexo : String;
+    private _sexo : SEXO;
     private _endereco : Endereco;
     private _telefones : Telefone[];
 
-    constructor(nome: String, cpf: number, dataNascimento: number, sexo: String, endereco: Endereco, telefones: Telefone[]){
+    constructor(nome: String, cpf: number, dataNascimento: number, sexo: SEXO, endereco: Endereco, telefones: Telefone[]){
         this._nome = nome;
         this._cpf = cpf;
         this._dataNascimento = dataNascimento;
@@ -43,7 +49,7 @@ export default class Cliente{
         this._dataNascimento = this.dataNascimento;
     }
 
-    get sexo() : String {
+    get sexo() : SEXO {
         return this._sexo;
     }
 
