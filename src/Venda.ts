@@ -53,8 +53,16 @@ export default class Venda{
           total += produto.valor;
         }
         
+<<<<<<< HEAD
         console.log("O valor da venda foi de R$: ");
         return total;
       }
       
 }
+=======
+        console.log("A valor da venda foi de R$: ");
+        return total;
+      }
+      
+}
+>>>>>>> 676b45dcaebb14f7867e09ea62828e756c86b4b2
